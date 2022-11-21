@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.33b758f7.css",
+    "main.js": "/static/js/main.8dcbab17.js",
+    "static/media/hand-painted-watercolor-pastel-sky-background_23-2148902771.webp": "/static/media/hand-painted-watercolor-pastel-sky-background_23-2148902771.3df0c67b6dd9d9bad062.webp",
+    "index.html": "/index.html",
+    "main.33b758f7.css.map": "/static/css/main.33b758f7.css.map",
+    "main.8dcbab17.js.map": "/static/js/main.8dcbab17.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33b758f7.css",
+    "static/js/main.8dcbab17.js"
+  ]
+}
