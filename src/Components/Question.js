@@ -38,26 +38,43 @@ const Question = (props) => {
     );
   });
 
-  function calculateClass(allowToShowRightAnswers, correctAnswer, answer) {
-    if (
-      allowToShowRightAnswers &&
-      chosenAnswer === answer &&
-      correctAnswer === answer
-    )
-      return "quest_label_chosen_and_correct";
-    if (allowToShowRightAnswers && chosenAnswer === answer)
-      return "quest_label_chosen_wrong";
-    if (allowToShowRightAnswers && correctAnswer === answer)
-      return "quest_label_correct";
-    if (chosenAnswer === answer) return "quest_label_chosen";
-    return "quest_label";
-  }
+// create a folder with actions like "utils" and move all functionality like this there
+// all text names shold be in file with constants and be reusable
+  const calculateClass = (allowToShowRightAnswers, correctAnswer, answer) => {
+    swith (true) {
+      case(allowToShowRightAnswers && chosenAnswer === answer && correctAnswer === answer):
+        return "quest_label_chosen_and_correct";
+      case(allowToShowRightAnswers && chosenAnswer === answer):
+        return "quest_label_chosen_wrong";
+      case(allowToShowRightAnswers && correctAnswer === answer): 
+        return "quest_label_correct";
+      case(chosenAnswer === answer): 
+        return "quest_label_correct";
+      default: 
+         return "quest_label";
+    }
+//     if (
+//       allowToShowRightAnswers &&
+//       chosenAnswer === answer &&
+//       correctAnswer === answer
+//     )
+//       return "quest_label_chosen_and_correct";
+    
+//     if (allowToShowRightAnswers && chosenAnswer === answer)
+//       return "quest_label_chosen_wrong";
+    
+//     if (allowToShowRightAnswers && correctAnswer === answer)
+//       return "quest_label_correct";
+    
+//     if (chosenAnswer === answer) return "quest_label_chosen";
+//     return "quest_label";
+//   }
 
   return (
     <div className="question">
       <h3 className="quest_title">{question}</h3>
       <ul className="quest_list">{answersElements}</ul>
-      <div className="quest_divider"></div>
+      <div className="quest_divider />
     </div>
   );
 };
